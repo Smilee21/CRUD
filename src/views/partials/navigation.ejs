@@ -1,0 +1,40 @@
+<%- include('modal')%>
+<nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+    <div class="container">
+      <a class="navbar-brand mono" href="/">Antonio Volcan</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div  class="collapse navbar-collapse mono" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/services">Servicios</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link logged-in" href="/public">Publicar</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link logged-in" id="LINK_EDIT" href="/edit">Editar Servicios</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link logged-out"  href="#" data-bs-toggle="modal" data-bs-target="#signinModal">Registrate</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link logged-out"  href="#" data-bs-toggle="modal" data-bs-target="#loginModal">Iniciar Sesion</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link logged-in"  href="#" id="logout">Cerrar Sesion</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link logged-in"  id="contacto" href="/contact" >Contactame</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <script src="/js/mainP.js" type="module"></script>
+  <script src="/js/userId.js" type="module"></script>
+  

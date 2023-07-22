@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= title%></title>
+    <%- include('partials/head')%>
+
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-SMX8CHEQTT"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-SMX8CHEQTT");
+    </script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  </head>
+
+  <body>
+    <%- include('partials/navigation')%>
+
+    <div class="container">
+      <div class="row w-75 p-3 mx-auto">
+        <form name="formulario" id="formData">
+          <div class="card-header">
+            <h3>Ofrece Tus Servicios</h3>
+          </div>
+          <div class="form-group p-3">
+            <label for="serviceName">Servicio</label>
+            <input
+              id="serviceName"
+              type="text"
+              class="form-control"
+              placeholder="Ingrese el Nombre del serviceo Aqui"
+            />
+          </div>
+          <div class="form-group p-3">
+            <label for="serviceType">Tipo de Servicio</label>
+            <select class="form-control" id="serviceType">
+              <option value="Informatica">Informatica</option>
+              <option value="Tutor">Tutor</option>
+              <option value="Maestro">Maestro</option>
+              <option value="Limpieza">Limpieza</option>
+              <option value="Enfermeria">Enfermeria</option>
+              <option value="Mecanico">Mecanico</option>
+              <option value="Tecnico">Tecnico</option>
+              <option value="Otro">Otro</option>
+            </select>
+          </div>
+          <div class="form-group p-3">
+            <label for="serviceDescripcion">Descripcion</label>
+            <textarea
+              class="form-control"
+              id="serviceDescripcion"
+              rows="3"
+              placeholder="aqui coloca la descripcion del servicio que ofreces, intenta que sea breve pero detallada"
+            ></textarea>
+          </div>
+
+          <div class="form-group p-3">
+            <label for="serviceTel">Telefono</label>
+            <input
+              placeholder="0424123456"
+              required
+              id="serviceTel"
+              type="tel"
+              class="form-control"
+            />
+            <span class="badge badge-warning text-center"
+              >*Con este numero te contactaran y podras prestar un servicio si
+              todo sale bien!! Asi que asegurate de ponerlo correctamente*</span
+            >
+          </div>
+          <div class="form-group p-3">
+            <label for="serviceOtherContact">Contacto Alternativo</label>
+
+            <input
+              placeholder="0424123456"
+              required
+              id="serviceOtherContact"
+              type="text"
+              class="form-control"
+            />
+            <span class="badge badge-warning"
+              >*Aqui puedes ingresar otro medio para contactarte, puede ser un
+              numero telefonico o otro correo*</span
+            >
+          </div>
+
+          <input
+            required
+            class="btn btn-primary p-3"
+            type="submit"
+            value="submit"
+          />
+        </form>
+      </div>
+    </div>
+
+    <%- include('partials/footer')%>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+    ></script>
+    <script src="/js/script.js" type="module"></script>
+  </body>
+</html>

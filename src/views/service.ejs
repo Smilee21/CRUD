@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= title%></title>
+    <%- include('partials/head')%>
+
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-SMX8CHEQTT"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-SMX8CHEQTT");
+    </script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  </head>
+
+  <body>
+    <%- include('partials/navigation')%> <% for(data of data) { %>
+
+    <div class="container p-5">
+      <div class="card bg-dark">
+        <div class="card-header"><%= data.type %></div>
+        <div class="card-body">
+          <h5 class="card-title"><%= data.name %></h5>
+          <span class="badge badge-info">
+            Aqui puedes ver la informacion de contacto del servicio y un poco
+            mas de la descripcion</span
+          >
+
+          <p class="card-text"><%= data.descripcion %></p>
+          <ul>
+            <div class="container p-5">
+              <span>Contacto</span>
+              <li><%= data.contact %></li>
+            </div>
+            <div class="container p-5">
+              <span>Contacto Alternativo</span>
+              <li><%= data.alt_contact %></li>
+            </div>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <%}%> <%- include('partials/footer')%>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+    ></script>
+  </body>
+</html>

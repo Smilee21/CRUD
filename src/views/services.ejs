@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= title%></title>
+    <%- include('partials/head')%>
+
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-SMX8CHEQTT"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-SMX8CHEQTT");
+    </script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  </head>
+
+  <body>
+    <%- include('partials/navigation')%>
+    <div class="container">
+      <div class="row">
+        <% for(data of data) { %>
+        <div class="col">
+          <div
+            class="card bg-dark p-3 m-5 position-relative"
+            style="width: 18rem"
+          >
+            <div class="card-body">
+              <h5 class="card-title"><%= data.name %></h5>
+              <h6 class="card-subtitle mb-2 text-muted"><%= data.type %></h6>
+              <p class="card-text"><%= data.descripcion %></p>
+              <a href="/services/<%=data.id%>" class="card-link"
+                >Ver Servicio</a
+              >
+            </div>
+          </div>
+        </div>
+        <%}%>
+      </div>
+    </div>
+    <%- include('partials/footer')%>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+    ></script>
+  </body>
+</html>

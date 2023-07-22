@@ -1,0 +1,27 @@
+body{
+    background-color: #202020;
+    color: white;
+}
+
+#curriculum{
+    font-family: monospace;
+    font-size: 1.5em;
+}
+
+.mono{
+    font-family: monospace;
+}
+
+.size{
+    font-size: 1em;
+    text-align: center;
+}
+
+.img{
+    width: 17em;
+}
+
+h3{
+    text-align: center;
+    margin-top: 50px;
+}

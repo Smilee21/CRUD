@@ -1,0 +1,104 @@
+<!-- Modal -->
+<div
+  class="modal fade"
+  id="signinModal"
+  tabindex="-1"
+  aria-labelledby=""
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content bg-dark">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">
+          Por Favor Registrate Para Acceder
+        </h1>
+        <button
+          type="button"
+          class="btn-close btn-close-white"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <form id="signup-form">
+          <label for="email-modal">Email:</label>
+          <input
+            type="email"
+            id="email-modal"
+            class="form-control mb-3"
+            placeholder="Usuario"
+            required
+          />
+
+          <label for="pass">Contraseña:</label>
+          <input
+            type="password"
+            id="pass"
+            class="form-control mb-3"
+            placeholder="*******"
+            minlength="6"
+            required
+          />
+
+          <button class="btn btn-primary w-100 mb-4" type="submit">
+            Registrate
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div
+  class="modal fade"
+  id="loginModal"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content bg-dark">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Inicia Sesion!</h1>
+        <button
+          type="button"
+          class="btn-close btn-close-white"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <form id="login-form">
+          <label for="login-email">Email:</label>
+          <input
+            type="email"
+            id="login-email"
+            class="form-control mb-3"
+            placeholder="Usuario"
+            required
+          />
+
+          <label for="login-pass">Contraseña:</label>
+          <input
+            type="password"
+            id="login-pass"
+            class="form-control mb-3"
+            placeholder="*******"
+            minlength="6"
+            required
+          />
+
+          <button class="btn btn-primary w-100 mb-4" type="submit">
+            Iniciar
+          </button>
+        </form>
+        <label for="googleLogin" class="mb-4"
+          >Tambien puedes iniciar sesion con google</label
+        >
+        <button id="googleLogin" class="btn btn-info w-100 mb-4" type="button">
+          Google
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
