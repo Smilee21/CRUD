@@ -43,6 +43,12 @@ router.get(
   (req, res) => {res.render("vacio", {title: "Sevicios"})}
 );
 
+router.get(
+  "/vacio",
+  (req, res) => {res.render("vacio", {title: "Sevicios"})}
+);
+
+
 
 router.get(
   "/services/:id",
@@ -53,8 +59,7 @@ router.get(
       db.all(sql, [], (err, rows) => {
         if (err) return res.json({ status: 300, succes: false, error: err });
 
-        if (rows.length < 1)
-          return res.json({ status: 300, succes: false, error: "no match" });
+        if (rows.length < 1) res.redirect("/vacio")
 
         res.render("service", { title: "Servicios Disponibles", data: rows });
       });
