@@ -28,7 +28,7 @@ router.get(
       db.all(sql, [], (err, rows) => {
         if (err) return res.json({ status: 300, succes: false, error: err });
         
-        if (rows.length < 1) res.redirect("/vacio")
+        if (rows.length < 1) return res.redirect("/vacio")
         
         res.render("services", { title: "Servicios Disponibles", data: rows });
       });
@@ -42,10 +42,6 @@ router.get(
   "/vacio",
   (req, res) => {res.render("vacio", {title: "Sevicios"})}
 );
-
-
-
-
 
 router.get(
   "/services/:id",
@@ -65,7 +61,6 @@ router.get(
       return res.json({ status: 400, succes: false });
     }
   }
-  //
 );
 
 router.get(
@@ -77,8 +72,7 @@ router.get(
       db.all(sql, [], (err, rows) => {
         if (err) return res.json({ status: 300, succes: false, error: err });
 
-        if (rows.length < 1)
-          res.redirect("/vacio")
+        if (rows.length < 1) return res.redirect("/vacio")
 
         res.render("edit", { title: "Editar Servicios", data: rows });
       });
@@ -86,7 +80,6 @@ router.get(
       return res.json({ status: 400, succes: false });
     }
   }
-  //
 );
 
 router.get(
@@ -97,13 +90,13 @@ router.get(
     try {
       db.all(sql, [], (err, rows) => {
         if (err) return res.json({ status: 300, succes: false, error: err });
+        if (rows.length < 1) return res.redirect("/vacio")
         res.redirect("/services");
       });
     } catch (error) {
       return res.json({ status: 400, succes: false });
     }
   }
-  //
 );
 router.get(
   "/editService/:id",
@@ -122,11 +115,5 @@ router.get(
       return res.json({ status: 400, succes: false });
     }
   }
-  //
 );
-
-
-
-
-
 export default router;
