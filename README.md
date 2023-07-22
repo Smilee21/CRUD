@@ -1,11 +1,7 @@
-# Pagina de Prueba
-Esta es una pequeña aplicaion de prueba, donde se muestra informacion sobre mi Antonio Volcan.
+En el siguiente proyecto se muestra el CRUD
 
-Caracteristicas Principales:
+El crud se realiza a travez de las operacines que hace el usuario las cuales son publicar un servicio, editarlo y eliminarlo.
 
-#    CRUD
-# Permite registrarse, guardar la sesion e iniciar sesion, tambien a traves de Google
-# Los datos que se ingresan en el formulario de contacto son enviados a un correo preestablecido.
-# Cuenta con BD MySql
+Los usuarios tambien podran ver los servicios publicados por los demas usuarios.
 
-# Cabe destacar que aun tiene cosas por mejorar :)
+SERVICIOS YA
